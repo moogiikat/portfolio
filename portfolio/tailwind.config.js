@@ -15,18 +15,4 @@ module.exports = {
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/line-clamp")],
-  daisyui: {
-    themes: [
-      {
-        light: {
-          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-          primary: "#202020",
-          secondary: "#ff781f",
-          success: "#4caf50",
-          warning: "#e6a23b",
-          error: "#f56c6b",
-        },
-      },
-    ],
-  },
 };
