@@ -1,4 +1,5 @@
 import { classNames } from "lib/utils";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,19 +13,22 @@ export default function Home() {
         <div
           className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}
         >
-          <img
+          <Image
+            alt="image"
             src={"/assets/home_image.jpg"}
+            width={1000}
+            height={1000}
             className="w-full h-full rounded"
-          ></img>
+          ></Image>
           <div className="overflow-x-auto">
             <h1 className="text-white text-2xl pl-5 border border-x-0 border-t-0 p-2">
               私について
             </h1>
             <table className="table text-white">
               <tbody>
-                {tableData.map((item) => {
+                {tableData.map((item, idx) => {
                   return (
-                    <tr>
+                    <tr key={idx}>
                       <th>{item.label}</th>
                       <td>{item.value}</td>
                     </tr>
@@ -39,9 +43,9 @@ export default function Home() {
           <div
             className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}
           >
-            {skills.map((item) => {
+            {skills.map((item, idx) => {
               return (
-                <div className="flex flex-col gap-y-2">
+                <div className="flex flex-col gap-y-2" key={`skill-${idx}`}>
                   <p>{item.label}</p>
                   <progress
                     className="progress progress-info w-full bg-gray-200 h-5"
