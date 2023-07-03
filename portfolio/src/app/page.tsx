@@ -3,7 +3,12 @@ import { classNames } from "lib/utils";
 export default function Home() {
   return (
     <div className="mockup-window border bg-base-300">
-      <div className="flex flex-col justify-center px-4 py-16 bg-base-200 gap-y-10">
+      <div
+        className={classNames(
+          "flex flex-col justify-center px-4 py-16 bg-base-200 gap-y-10",
+          "lg:px-16"
+        )}
+      >
         <div
           className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}
         >
@@ -34,34 +39,18 @@ export default function Home() {
           <div
             className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}
           >
-            <div className="flex flex-col gap-y-5">
-              {skills.map((item) => {
-                return (
-                  <div className="flex flex-col gap-y-2">
-                    <p>{item.label}</p>
-                    <progress
-                      className="progress progress-info w-full bg-gray-200"
-                      value={item.value}
-                      max="100"
-                    ></progress>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="flex flex-col gap-y-5">
-              {skills.map((item) => {
-                return (
-                  <div className="flex flex-col gap-y-2">
-                    <p>{item.label}</p>
-                    <progress
-                      className="progress progress-info w-full bg-gray-200"
-                      value={item.value}
-                      max="100"
-                    ></progress>
-                  </div>
-                );
-              })}
-            </div>
+            {skills.map((item) => {
+              return (
+                <div className="flex flex-col gap-y-2">
+                  <p>{item.label}</p>
+                  <progress
+                    className="progress progress-info w-full bg-gray-200 h-5"
+                    value={item.value}
+                    max="100"
+                  ></progress>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -82,6 +71,19 @@ const tableData = [
 ];
 
 const skills = [
-  { label: "css", value: "90" },
-  { label: "html", value: "90" },
+  { label: "CSS", value: "90" },
+  { label: "HTML", value: "90" },
+  { label: "TAILWIND CSS", value: "100" },
+  { label: "JS", value: "90" },
+  { label: "C++", value: "40" },
+  { label: "REACT JS", value: "80" },
+  { label: "NEXT JS", value: "90" },
+  { label: "TYPESCRIPT", value: "90" },
+  { label: "RUBY ON RAILS", value: "40" },
+  { label: "RAILS", value: "40" },
+  { label: "FIGMA", value: "70" },
+  { label: "GIHUB", value: "100" },
+  { label: "GITLUB", value: "70" },
+  { label: "JAVA", value: "40" },
+  { label: "SPRING BOOT", value: "50" },
 ];
