@@ -39,16 +39,23 @@ export default function Home() {
                     </tr>
                   );
                 })}
+                <tr key={"sns"}>
+                  <th className="whitespace-nowrap">{"SNS:"}</th>
+                  <td className="flex gap-x-5">
+                    <Link
+                      href={"https://www.facebook.com/munkherdene.byambajav.5"}
+                    >
+                      <FBLogo />
+                    </Link>
+                    <Link href={"https://www.instagram.com/mk_photographer24/"}>
+                      <InstaLogo />
+                    </Link>
+                  </td>
+                </tr>
               </tbody>
             </table>
-            <div className="pl-4 text-white flex gap-x-4">
-              <p>SNS:</p>
-              <Link href={"https://www.facebook.com/munkherdene.byambajav.5"}>
-                <FBLogo />
-              </Link>
-              <Link href={"https://www.instagram.com/mk_photographer24/"}>
-                <InstaLogo />
-              </Link>
+            <div className="py-5">
+              <button className="btn btn-primary">CVをダウンロード</button>
             </div>
           </div>
         </div>
