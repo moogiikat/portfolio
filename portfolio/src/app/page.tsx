@@ -3,6 +3,7 @@ import Link from "next/link";
 
 //
 import { FBLogo, InstaLogo } from "lib/assets/socials";
+import { tableData, skills, studyHistory, jobHistory } from "lib/data";
 import { classNames } from "lib/utils";
 
 export default function Home() {
@@ -51,6 +52,46 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div
+          className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}
+        >
+          <div className="flex flex-col gap-y-5">
+            <h1 className="text-2xl text-white">学歴</h1>
+            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+              {studyHistory.map((item) => {
+                return (
+                  <li className="mb-10 ml-4">
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      {item.date}
+                    </time>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {item.label}
+                    </h3>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+          <div className="flex flex-col gap-y-5">
+            <h1 className="text-2xl text-white">職歴</h1>
+            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+              {jobHistory.map((item) => {
+                return (
+                  <li className="mb-10 ml-4">
+                    <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      {item.date}
+                    </time>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {item.label}
+                    </h3>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </div>
         <div className="flex flex-col gap-y-5 text-white">
           <h1 className="text-2xl">スキル</h1>
           <div
@@ -74,33 +115,3 @@ export default function Home() {
     </div>
   );
 }
-
-const tableData = [
-  { label: "名前", value: "ビャンバジャブ ムンフエルデネ" },
-  { label: "メール", value: "monkhoo1997ts@gmail.com" },
-  { label: "電話番号", value: "+97691118058" },
-  { label: "誕生日", value: "1997年11月14日" },
-  { label: "国籍", value: "モンゴル" },
-  {
-    label: "趣味",
-    value: "バスケットボール、チェス、旅行、写真撮影、コーディング",
-  },
-];
-
-const skills = [
-  { label: "CSS", value: "90" },
-  { label: "HTML", value: "90" },
-  { label: "TAILWIND CSS", value: "100" },
-  { label: "JS", value: "90" },
-  { label: "C++", value: "40" },
-  { label: "REACT JS", value: "80" },
-  { label: "NEXT JS", value: "90" },
-  { label: "TYPESCRIPT", value: "90" },
-  { label: "RUBY ON RAILS", value: "40" },
-  { label: "RAILS", value: "40" },
-  { label: "FIGMA", value: "70" },
-  { label: "GIHUB", value: "100" },
-  { label: "GITLUB", value: "70" },
-  { label: "JAVA", value: "40" },
-  { label: "SPRING BOOT", value: "50" },
-];
