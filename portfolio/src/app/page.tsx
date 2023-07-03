@@ -34,7 +34,7 @@ export default function Home() {
                 {tableData.map((item, idx) => {
                   return (
                     <tr key={idx}>
-                      <th>{item.label}</th>
+                      <th className="whitespace-nowrap">{item.label}</th>
                       <td>{item.value}</td>
                     </tr>
                   );
