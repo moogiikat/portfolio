@@ -26,7 +26,7 @@ export default function Home() {
             className="w-full h-full rounded"
           ></Image>
           <div className="overflow-x-auto">
-            <h1 className="text-white text-2xl pl-4 border border-x-0 border-t-0 p-2">
+            <h1 className="text-white text-2xl pl-4 border border-x-0 border-t-0 p-2 font-bold">
               私について
             </h1>
             <table className="table text-white">
