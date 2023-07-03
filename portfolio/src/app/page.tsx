@@ -1,5 +1,9 @@
-import { classNames } from "lib/utils";
 import Image from "next/image";
+import Link from "next/link";
+
+//
+import { FBLogo, InstaLogo } from "lib/assets/socials";
+import { classNames } from "lib/utils";
 
 export default function Home() {
   return (
@@ -21,7 +25,7 @@ export default function Home() {
             className="w-full h-full rounded"
           ></Image>
           <div className="overflow-x-auto">
-            <h1 className="text-white text-2xl pl-5 border border-x-0 border-t-0 p-2">
+            <h1 className="text-white text-2xl pl-4 border border-x-0 border-t-0 p-2">
               私について
             </h1>
             <table className="table text-white">
@@ -36,6 +40,15 @@ export default function Home() {
                 })}
               </tbody>
             </table>
+            <div className="pl-4 text-white flex gap-x-4">
+              <p>SNS:</p>
+              <Link href={"https://www.facebook.com/munkherdene.byambajav.5"}>
+                <FBLogo />
+              </Link>
+              <Link href={"https://www.instagram.com/mk_photographer24/"}>
+                <InstaLogo />
+              </Link>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-y-5 text-white">
