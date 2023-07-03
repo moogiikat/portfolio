@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

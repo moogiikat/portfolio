@@ -17,9 +17,13 @@ export const metadata: Metadata = {
 
 const RootLayout: React.FCC = ({ children }) => {
   return (
-    <div className={classNames("flex min-h-screen w-full flex-col")}>
-      {children}
-    </div>
+    <html>
+      <body>
+        <div className={classNames("flex min-h-screen w-full flex-col")}>
+          {children}
+        </div>
+      </body>
+    </html>
   );
 };
 export default RootLayout;
