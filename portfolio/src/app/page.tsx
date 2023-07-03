@@ -12,7 +12,7 @@ export default function Home() {
       <div
         className={classNames(
           "flex flex-col justify-center px-4 py-16 bg-base-200 gap-y-10",
-          "lg:px-16"
+          "lg:px-20"
         )}
       >
         <div
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
         </div>
         <div className="text-white">
-          <h1 className="text-2xl">自己PR</h1>
+          <h1 className="text-2xl font-bold">自己PR</h1>
           私は会社員として最初の1年間、5つのWEB開発プロジェクトに参加しました。その中で、2つは大規模なプロジェクトで、Ruby
           on Railsを使用していました。これらのプロジェクトでは、Ruby on
           Rails、Spring Boot、Java、JavaScript、CSS、HTML、Vue.js
@@ -74,7 +74,7 @@ export default function Home() {
           className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}
         >
           <div className="flex flex-col gap-y-5">
-            <h1 className="text-2xl text-white">学歴</h1>
+            <h1 className="text-2xl text-white font-bold">学歴</h1>
             <ol className="relative border-l border-gray-200 dark:border-gray-700">
               {studyHistory.map((item, idx) => {
                 return (
@@ -83,7 +83,7 @@ export default function Home() {
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                       {item.date}
                     </time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
                       {item.label}
                     </h3>
                   </li>
@@ -92,7 +92,7 @@ export default function Home() {
             </ol>
           </div>
           <div className="flex flex-col gap-y-5">
-            <h1 className="text-2xl text-white">職歴</h1>
+            <h1 className="text-2xl text-white font-bold">職歴</h1>
             <ol className="relative border-l border-gray-200 dark:border-gray-700">
               {jobHistory.map((item, idx) => {
                 return (
@@ -101,7 +101,7 @@ export default function Home() {
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                       {item.date}
                     </time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
                       {item.label}
                     </h3>
                   </li>
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col gap-y-5 text-white">
-          <h1 className="text-2xl">スキル</h1>
+          <h1 className="text-2xl font-bold">スキル</h1>
           <div
             className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}
           >
