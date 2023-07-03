@@ -75,3 +75,25 @@ export const jobHistory = [
     date: "現在",
   },
 ];
+
+export const projects = [
+  {
+    label: "MIRAIポータル",
+    body: "JP-MIRAIポータルは、官民協力して作っている安心・安全に日本で働き・暮す為の総合サイトです。",
+    image: "https://portal.jp-mirai.org/assets/images/og_en.png",
+    url: "https://portal.jp-mirai.org/jag",
+  },
+  {
+    label: "クリニックボード",
+    body: "クリニック／診療所の経営指標を 瞬時に定量化・可視化する経営分析ソリューション",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/5eb445e72bae9e53acb1230f/1599062552895-JVWB87M3TAL05OTW011T/home-middle-banner.jpg",
+    url: "https://clinicboard.jp/",
+  },
+  {
+    label: "COSMOS",
+    body: "仲間と繋がるバイカー同士の助け合い",
+    image: "https://cosmos-khaki.vercel.app/assets/home_background.jpg",
+    url: "https://cosmos-khaki.vercel.app/",
+  },
+];

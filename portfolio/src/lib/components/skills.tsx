@@ -11,7 +11,7 @@ export const Skills: React.FC = () => {
             <div className="flex flex-col gap-y-2" key={`skill-${idx}`}>
               <p>{item.label}</p>
               <progress
-                className="progress progress-info w-full bg-gray-200 h-5"
+                className="progress progress-info w-full h-3"
                 value={item.value}
                 max="100"
               ></progress>
@@ -19,6 +19,7 @@ export const Skills: React.FC = () => {
           );
         })}
       </div>
+      {/* <h1 className="text-2xl font-bold">言語レベル</h1> */}
     </div>
   );
 };

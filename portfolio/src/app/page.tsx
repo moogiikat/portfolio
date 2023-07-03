@@ -1,6 +1,12 @@
 import { classNames } from "lib/utils";
 //
-import { AboutMe, SelfPr, Skills, StudyJobHistory } from "lib/components";
+import {
+  AboutMe,
+  Projects,
+  SelfPr,
+  Skills,
+  StudyJobHistory,
+} from "lib/components";
 
 export default function Home() {
   return (
@@ -8,13 +14,14 @@ export default function Home() {
       <div
         className={classNames(
           "flex flex-col justify-center px-4 py-16 bg-base-200 gap-y-10",
-          "lg:px-20"
+          "lg:px-32"
         )}
       >
         <AboutMe />
         <SelfPr />
         <StudyJobHistory />
         <Skills />
+        <Projects />
       </div>
     </div>
   );

@@ -45,7 +45,7 @@ export const AboutMe: React.FC = () => {
         <div className="py-5">
           <a
             href="https://www.r-agent.com/guide/wp-content/uploads/2021/07/1_kourousyourirekisyo.pdf"
-            className="btn btn-primary"
+            className="btn btn-primary animate-pulse"
             target={"_blank"}
           >
             CVをダウンロード

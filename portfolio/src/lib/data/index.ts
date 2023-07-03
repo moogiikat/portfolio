@@ -1,1 +1,7 @@
-export { tableData, skills, studyHistory, jobHistory } from "./portfolio_data";
+export {
+  tableData,
+  projects,
+  skills,
+  studyHistory,
+  jobHistory,
+} from "./portfolio_data";
