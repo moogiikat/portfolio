@@ -10,10 +10,10 @@ import {
 
 export default function Home() {
   return (
-    <div className="mockup-window border bg-base-300">
+    <div className="mockup-window border bg-gray-950">
       <div
         className={classNames(
-          "flex flex-col justify-center px-4 py-16 bg-base-200 gap-y-10",
+          "flex flex-col justify-center px-4 py-16 bg-gray-900 gap-y-10",
           "lg:px-32"
         )}
       >

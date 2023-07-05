@@ -7,15 +7,10 @@ export const Projects: React.FC = () => {
   return (
     <div className="flex flex-col gap-y-5 text-white">
       <h1 className="text-2xl font-bold">今までのプロジェクト</h1>
-      <div
-        className={classNames(
-          "flex flex-col gap-y-5",
-          "lg:gap-x-5 lg:flex-row"
-        )}
-      >
+      <div className={classNames("grid gap-y-5", "lg:gap-x-5 lg:grid-cols-3")}>
         {projects.map((item, idx) => {
           return (
-            <div className="card w-96 bg-base-100 shadow-xl" key={idx}>
+            <div className="card w-full bg-base-100 shadow-xl" key={idx}>
               <figure>
                 <img src={item.image} alt={item.label} />
               </figure>
