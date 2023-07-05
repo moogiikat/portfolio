@@ -7,6 +7,7 @@ export const Skills: React.FC = () => {
       <h1 className="text-2xl font-bold">スキル</h1>
       <div className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
         <div className={classNames("lg:col-span-1")}>
+          <h1 className="pb-5 text-xl font-bold">コーディングスキル</h1>
           {skills.map((item, idx) => {
             return (
               <div className="flex flex-col gap-y-2" key={`skill-${idx}`}>
@@ -21,12 +22,13 @@ export const Skills: React.FC = () => {
           })}
         </div>
         <div className={classNames("lg:col-span-1")}>
+          <h1 className="pb-5 text-xl font-bold">その他のスキル</h1>
           {otherSkills.map((item, idx) => {
             return (
               <div className="flex flex-col gap-y-2" key={`otherSkill-${idx}`}>
                 <p>{item.label}</p>
                 <progress
-                  className="progress progress-info w-full h-3"
+                  className="progress progress-accent w-full h-3"
                   value={item.value}
                   max="100"
                 ></progress>
