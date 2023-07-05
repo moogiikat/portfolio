@@ -23,7 +23,7 @@ export const AboutMe: React.FC = () => {
           <tbody>
             {tableData.map((item, idx) => {
               return (
-                <tr key={idx}>
+                <tr key={idx} className="border-none">
                   <th className="whitespace-nowrap">{item.label}</th>
                   <td>{item.value}</td>
                 </tr>
