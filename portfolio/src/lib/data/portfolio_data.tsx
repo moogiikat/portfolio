@@ -11,21 +11,29 @@ export const tableData = [
 ];
 
 export const skills = [
+  { label: "TAILWIND CSS", value: "100" },
   { label: "CSS", value: "90" },
   { label: "HTML", value: "90" },
-  { label: "TAILWIND CSS", value: "100" },
   { label: "JS", value: "90" },
-  { label: "C++", value: "40" },
-  { label: "REACT JS", value: "80" },
   { label: "NEXT JS", value: "90" },
   { label: "TYPESCRIPT", value: "90" },
+  { label: "REACT JS", value: "80" },
+  { label: "SPRING BOOT", value: "50" },
+  { label: "C++", value: "40" },
   { label: "RUBY ON RAILS", value: "40" },
   { label: "RAILS", value: "40" },
-  { label: "FIGMA", value: "70" },
-  { label: "GIHUB", value: "100" },
-  { label: "GITLUB", value: "70" },
   { label: "JAVA", value: "40" },
-  { label: "SPRING BOOT", value: "50" },
+];
+
+export const otherSkills = [
+  { label: "モンゴル語", value: "100" },
+  { label: "GITHUB", value: "100" },
+  { label: "日本語", value: "100" },
+  { label: "BACKLOG", value: "80" },
+  { label: "英語", value: "75" },
+  { label: "FIGMA", value: "70" },
+  { label: "GITLUB", value: "70" },
+  { label: "PS", value: "50" },
 ];
 
 export const studyHistory = [
