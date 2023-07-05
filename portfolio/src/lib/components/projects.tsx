@@ -10,7 +10,7 @@ export const Projects: React.FC = () => {
       <div className={classNames("grid gap-y-5", "lg:gap-x-5 lg:grid-cols-3")}>
         {projects.map((item, idx) => {
           return (
-            <div className="card w-full bg-base-100 shadow-xl" key={idx}>
+            <div className="card w-full bg-gray-800 shadow-xl" key={idx}>
               <figure>
                 <img src={item.image} alt={item.label} />
               </figure>
