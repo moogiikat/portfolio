@@ -1,3 +1,4 @@
+import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import { studyHistory, jobHistory } from "lib/data";
 import { classNames } from "lib/utils";
 
@@ -5,7 +6,10 @@ export const StudyJobHistory: React.FC = () => {
   return (
     <div className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
       <div className="flex flex-col gap-y-5">
-        <h1 className="text-2xl text-white font-bold">学歴</h1>
+        <div className="flex">
+          <AcademicCapIcon width={30} className="text-primary" />
+          <h1 className="text-white text-2xl pl-4 p-2 font-bold">学歴</h1>
+        </div>
         <ol className="relative border-l border-gray-200">
           {studyHistory.map((item, idx) => {
             return (
@@ -21,7 +25,10 @@ export const StudyJobHistory: React.FC = () => {
         </ol>
       </div>
       <div className="flex flex-col gap-y-5">
-        <h1 className="text-2xl text-white font-bold">職歴</h1>
+        <div className="flex">
+          <BriefcaseIcon width={30} className="text-primary" />
+          <h1 className="text-white text-2xl pl-4 p-2 font-bold">職歴</h1>
+        </div>
         <ol className="relative border-l border-gray-200">
           {jobHistory.map((item, idx) => {
             return (

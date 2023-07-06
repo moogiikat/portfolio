@@ -1,3 +1,4 @@
+import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 //
@@ -16,9 +17,11 @@ export const AboutMe: React.FC = () => {
         className="w-full h-full rounded"
       />
       <div className="overflow-x-auto">
-        <h1 className="text-white text-2xl pl-4 border border-x-0 border-t-0 p-2 font-bold">
-          私について
-        </h1>
+        <div className="flex border border-x-0 border-t-0">
+          <UserCircleIcon width={30} className="text-primary" />
+          <h1 className="text-white text-2xl pl-4 p-2 font-bold">私について</h1>
+        </div>
+
         <table className="table text-white">
           <tbody>
             {tableData.map((item, idx) => {
