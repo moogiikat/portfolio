@@ -263,7 +263,7 @@ export function Projects() {
               </a>
             </p>
             <p className="text-base md:text-lg font-bold mt-4">
-              その他もクロム拡張機能やウエブやスマホアプリなど開発しています。
+              その他も個人的にクロム拡張機能やウエブやスマホアプリなど開発しています。
             </p>
           </div>
         </div>
