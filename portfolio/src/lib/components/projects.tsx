@@ -8,20 +8,20 @@ export function Projects() {
       title: "2020",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <h1 className="text-base md:text-lg font-bold">CLINIC BOARD</h1>
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            <p className="text-base md:text-lg font-bold">CLINIC BOARD</p>
             <p>
               医療クリニックや診療所の経営指標を即座に定量化・可視化するための経営分析ソリューションの開発
             </p>
             <p>【言語】 Ruby 【フレームワーク】 Ruby on Rails</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-          </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <h1 className="text-base md:text-lg font-bold">BEER ON TAP</h1>
+          </div>
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            <p className="text-base md:text-lg font-bold">BEER ON TAP</p>
             <p>日本全体でビールを購入できるウェブアプリの開発</p>
             <p>【言語】 Java 【フレームワーク】 Spring boot</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-          </p>
+          </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
               src="/assets/project_1.jpg"
@@ -45,7 +45,7 @@ export function Projects() {
       title: "2021",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             <h1 className="text-base md:text-lg font-bold">自社製品</h1>
             <p>ブロックチェーンを基盤としたWebアプリの開発</p>
             <p>【言語】 Typescript 【フレームワーク】 React js, Nest js</p>
@@ -55,9 +55,9 @@ export function Projects() {
             <p>
               ・ブロックチェーンに関する知識を積極的に学び、その知識をプロジェクトに活かす取り組みを行いました。
             </p>
-          </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <h1 className="text-base md:text-lg font-bold">自社製品</h1>
+          </div>
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            <p className="text-base md:text-lg font-bold">自社製品</p>
             <p>
               クロム（Chrome）拡張機能の開発とQRコードを読み込むアプリの開発
             </p>
@@ -78,7 +78,7 @@ export function Projects() {
             <p>
               ・クロム（Chrome）拡張機能上で表示したQRコードを読み込むスマホアプリを作成しました。
             </p>
-          </p>
+          </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
               src="/assets/project_1.jpg"
@@ -102,10 +102,10 @@ export function Projects() {
       title: "2022",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <h1 className="text-base md:text-lg font-bold">
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            <p className="text-base md:text-lg font-bold">
               JICA(国際協力機構)向け業務システム
-            </h1>
+            </p>
             <p>Webアプリケーションの開発</p>
             <p>
               【言語】 Typescript 【フレームワーク】 Next JS 【DB】 Postgresql
@@ -124,15 +124,15 @@ export function Projects() {
               ・技術選定において、最適なツールやフレームワークの提案を行い、プロジェクトの成功に貢献しました。
             </p>
             <p>・playwrightを使用して自動化テストするコードを作成しました。</p>
-          </p>
-          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <h1 className="text-base md:text-lg font-bold">自社システム</h1>
+          </div>
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            <p className="text-base md:text-lg font-bold">自社システム</p>
             <p>
               自社の社員や様々な情報を管理するウェブアプリの開発プロジェクト
             </p>
             <p>Typescript 【フレームワーク】 Next JS、Vue JS</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-          </p>
+          </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
               src="/assets/project_1.jpg"
