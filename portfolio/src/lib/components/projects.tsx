@@ -16,9 +16,15 @@ export function Projects() {
             <p>【言語】 Ruby 【フレームワーク】 Ruby on Rails</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
             <ul className="list-disc list-inside">
-              <li>仕事の流れは基本設計書の作成、設計書通りの画面作成、単体テストと結合テストの順で進めました。</li>
-              <li>画面設計書に基づいて画面を作成し、バグ修正も担当しました。</li>
-              <li>初めての大規模プロジェクトに参加し、多くの知識と経験を得ることができました。</li>
+              <li>
+                仕事の流れは基本設計書の作成、設計書通りの画面作成、単体テストと結合テストの順で進めました。
+              </li>
+              <li>
+                画面設計書に基づいて画面を作成し、バグ修正も担当しました。
+              </li>
+              <li>
+                初めての大規模プロジェクトに参加し、多くの知識と経験を得ることができました。
+              </li>
             </ul>
           </div>
           <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -27,8 +33,13 @@ export function Projects() {
             <p>【言語】 Java 【フレームワーク】 Spring boot</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
             <ul className="list-disc list-inside">
-              <li>UI・UX を考え、ユーザーが使いやすい用なデザインを提案し画面を作成しました。</li>
-              <li>ユーザーからのフィードバックを積極的に収集し、機能改善や利便性の向上に取り組みました。</li>
+              <li>
+                UI・UX
+                を考え、ユーザーが使いやすい用なデザインを提案し画面を作成しました。
+              </li>
+              <li>
+                ユーザーからのフィードバックを積極的に収集し、機能改善や利便性の向上に取り組みました。
+              </li>
             </ul>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -192,7 +203,9 @@ export function Projects() {
                 https://workmaster.mn/
               </a>
             </p>
-            <p className="text-base md:text-lg font-bold mt-4">AHCC Mongolia LP</p>
+            <p className="text-base md:text-lg font-bold mt-4">
+              AHCC Mongolia LP
+            </p>
             <p>
               <a
                 href="https://www.ahcc.mn/"
@@ -203,7 +216,9 @@ export function Projects() {
                 https://www.ahcc.mn/
               </a>
             </p>
-            <p className="text-base md:text-lg font-bold mt-4">その他も色々あります。</p>
+            <p className="text-base md:text-lg font-bold mt-4">
+              その他もクロム拡張機能やウエブやスマホアプリなど開発しています。
+            </p>
           </div>
         </div>
       ),
