@@ -35,16 +35,16 @@ export const AboutMe: React.FC = () => {
             <tr key={"sns"}>
               <th className="whitespace-nowrap">{"SNS:"}</th>
               <td className="flex gap-x-5">
-                <Link href={"https://www.facebook.com/munkherdene.byambajav.5"}>
+                <Link href={"https://www.facebook.com/munkherdene.byambajav.5"} target="_blank">
                   <FBLogo />
                 </Link>
-                <Link href={"https://www.instagram.com/mk_photographer24/"}>
+                <Link href={"https://www.instagram.com/mk_photographer24/"} target="_blank">
                   <InstaLogo />
                 </Link>
-                <Link href={"https://github.com/moogiikat"}>
+                <Link href={"https://github.com/moogiikat"} target="_blank">
                   <GitHubLogo />
                 </Link>
-                <Link href={"https://www.linkedin.com/in/munkh-erdene-byambajav-71b06021b/"}>
+                <Link href={"https://www.linkedin.com/in/munkh-erdene-byambajav-71b06021b/"} target="_blank">
                   <LinkedInLogo />
                 </Link>
               </td>
