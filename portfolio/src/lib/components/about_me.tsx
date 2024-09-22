@@ -2,13 +2,13 @@ import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 //
-import { FBLogo, InstaLogo } from "lib/assets/socials";
+import { FBLogo, InstaLogo, GitHubLogo, LinkedInLogo } from "lib/assets/socials";
 import { tableData } from "lib/data";
-import { classNames } from "lib/utils";
+import { cn } from "lib/utils";
 
 export const AboutMe: React.FC = () => {
   return (
-    <div className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
+    <div className={cn("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
       <Image
         alt="image"
         src={"/assets/home_image.jpg"}
@@ -41,11 +41,17 @@ export const AboutMe: React.FC = () => {
                 <Link href={"https://www.instagram.com/mk_photographer24/"}>
                   <InstaLogo />
                 </Link>
+                <Link href={"https://github.com/moogiikat"}>
+                  <GitHubLogo />
+                </Link>
+                <Link href={"https://www.linkedin.com/in/munkh-erdene-byambajav-71b06021b/"}>
+                  <LinkedInLogo />
+                </Link>
               </td>
             </tr>
           </tbody>
         </table>
-        <div className="py-5">
+        {/* <div className="py-5">
           <a
             href="https://www.r-agent.com/guide/wp-content/uploads/2021/07/1_kourousyourirekisyo.pdf"
             className="btn btn-primary animate-pulse"
@@ -53,7 +59,7 @@ export const AboutMe: React.FC = () => {
           >
             CVをダウンロード
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

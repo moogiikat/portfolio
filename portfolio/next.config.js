@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
+  images: {
+    domains: ['assets.aceternity.com'],
+  },
+  experimental: {
+    appDir: true,
   },
 };
 

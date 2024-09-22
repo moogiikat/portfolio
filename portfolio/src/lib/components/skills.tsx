@@ -1,6 +1,6 @@
 import { TicketIcon } from "@heroicons/react/24/outline";
 import { skills, otherSkills } from "lib/data";
-import { classNames } from "lib/utils";
+import { cn } from "lib/utils";
 
 export const Skills: React.FC = () => {
   return (
@@ -9,8 +9,8 @@ export const Skills: React.FC = () => {
         <TicketIcon width={30} className="text-primary" />
         <h1 className="text-white text-2xl pl-4 p-2 font-bold">スキル</h1>
       </div>
-      <div className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
-        <div className={classNames("lg:col-span-1")}>
+      <div className={cn("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
+        <div className={cn("lg:col-span-1")}>
           <h1 className="pb-5 text-xl font-bold">コーディングスキル</h1>
           {skills.map((item, idx) => {
             return (
@@ -25,7 +25,7 @@ export const Skills: React.FC = () => {
             );
           })}
         </div>
-        <div className={classNames("lg:col-span-1")}>
+        <div className={cn("lg:col-span-1")}>
           <h1 className="pb-5 text-xl font-bold">その他のスキル</h1>
           {otherSkills.map((item, idx) => {
             return (

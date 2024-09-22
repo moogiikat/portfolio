@@ -1,7 +1,7 @@
 export const tableData = [
   { label: "名前", value: "ビャンバジャブ ムンフエルデネ" },
-  { label: "メール", value: "monkhoo1997ts@gmail.com" },
-  { label: "電話番号", value: "+97691118058" },
+  { label: "メール", value: "moogiikat0420@gmail.com" },
+  { label: "電話番号", value: "+09055308007" },
   { label: "誕生日", value: "1997年11月14日" },
   { label: "国籍", value: "モンゴル" },
   {
@@ -74,12 +74,12 @@ export const jobHistory = [
   },
   {
     label:
-      "GTN（グローバルトラストネットワークス）の支店会社GTN Mongoliaに入社",
+      "GTN（グローバルトラストネットワークス）入社",
     date: "2022年3月",
   },
   {
     label:
-      "GTN（グローバルトラストネットワークス）の支店会社GTN Mongoliaに在籍中",
+      "GTN（グローバルトラストネットワークス）に在籍中",
     date: "現在",
   },
 ];

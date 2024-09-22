@@ -1,4 +1,4 @@
-import { classNames } from "lib/utils";
+import { cn } from "lib/utils";
 //
 import {
   AboutMe,
@@ -10,11 +10,10 @@ import {
 
 export default function Home() {
   return (
-    <div className="mockup-window border bg-gray-950">
+    <div className="mockup-window border bg-gray-900">
       <div
-        className={classNames(
-          "flex flex-col justify-center px-4 py-16 bg-gray-900 gap-y-10",
-          "lg:px-32"
+        className={cn(
+          "flex flex-col justify-center px-4 py-16 gap-y-10 max-w-[1000px] mx-auto",
         )}
       >
         <AboutMe />

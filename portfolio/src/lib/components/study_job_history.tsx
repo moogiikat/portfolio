@@ -1,10 +1,10 @@
 import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import { studyHistory, jobHistory } from "lib/data";
-import { classNames } from "lib/utils";
+import { cn } from "lib/utils";
 
 export const StudyJobHistory: React.FC = () => {
   return (
-    <div className={classNames("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
+    <div className={cn("grid gap-y-5", "lg:grid-cols-2 lg:gap-x-10")}>
       <div className="flex flex-col gap-y-5">
         <div className="flex">
           <AcademicCapIcon width={30} className="text-primary" />

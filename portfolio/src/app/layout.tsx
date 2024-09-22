@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 import type { Metadata } from "next/types";
 import { Inter } from "@next/font/google";
 
-import { classNames } from "lib/utils";
+import { cn } from "lib/utils";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,7 +19,7 @@ const RootLayout: React.FCC = ({ children }) => {
   return (
     <html>
       <body>
-        <div className={classNames("flex min-h-screen w-full flex-col")}>
+        <div className={cn("flex min-h-screen w-full flex-col")}>
           {children}
         </div>
       </body>
