@@ -15,15 +15,18 @@ export function Projects() {
             </p>
             <p>【言語】 Ruby 【フレームワーク】 Ruby on Rails</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside">
-              <li>
-                仕事の流れは基本設計書の作成、設計書通りの画面作成、単体テストと結合テストの順で進めました。
+            <ul className="list-disc list-inside space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>仕事の流れは基本設計書の作成、設計書通りの画面作成、単体テストと結合テストの順で進めました。</span>
               </li>
-              <li>
-                画面設計書に基づいて画面を作成し、バグ修正も担当しました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>画面設計書に基づいて画面を作成し、バグ修正も担当しました。</span>
               </li>
-              <li>
-                初めての大規模プロジェクトに参加し、多くの知識と経験を得ることができました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>初めての大規模プロジェクトに参加し、多くの知識と経験を得ることができました。</span>
               </li>
             </ul>
           </div>
@@ -32,13 +35,14 @@ export function Projects() {
             <p>日本全体でビールを購入できるウェブアプリの開発</p>
             <p>【言語】 Java 【フレームワーク】 Spring boot</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside">
-              <li>
-                UI・UX
-                を考え、ユーザーが使いやすい用なデザインを提案し画面を作成しました。
+            <ul className="list-disc list-inside space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>UI・UX を考え、ユーザーが使いやすい用なデザインを提案し画面を作成しました。</span>
               </li>
-              <li>
-                ユーザーからのフィードバックを積極的に収集し、機能改善や利便性の向上に取り組みました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>ユーザーからのフィードバックを積極的に収集し、機能改善や利便性の向上に取り組みました。</span>
               </li>
             </ul>
           </div>
@@ -70,11 +74,18 @@ export function Projects() {
             <p>ブロックチェーンを基盤としたWebアプリの開発</p>
             <p>【言語】 Typescript 【フレームワーク】 React js, Nest js</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside">
-              <li>画面設計書通りに画面を作成し、バグ修正も行いました。</li>
-              <li>Puppeteerを使用してunitテストとscenarioテストを書きました。</li>
-              <li>
-                ブロックチェーンに関する知識を積極的に学び、その知識をプロジェクトに活かす取り組みを行いました。
+            <ul className="list-disc list-inside space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>画面設計書通りに画面を作成し、バグ修正も行いました。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Puppeteerを使用してunitテストとscenarioテストを書きました。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>ブロックチェーンに関する知識を積極的に学び、その知識をプロジェクトに活かす取り組みを行いました。</span>
               </li>
             </ul>
           </div>
@@ -85,21 +96,34 @@ export function Projects() {
             </p>
             <p>【言語】 Typescript 【フレームワーク】 React js React native</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside">
-              <li>クロム拡張機能の開発を行いました。</li>
-              <li>
-                画面設計書に従って、使いやすくて機能的な拡張機能の画面を作成しました。
+            <ul className="list-disc list-inside space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>クロム拡張機能の開発を行いました。</span>
               </li>
-              <li>
-                技術選定において、最適なツールやライブラリの提案を行いました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>画面設計書に従って、使いやすくて機能的な拡張機能の画面を作成しました。</span>
               </li>
-              <li>Puppeteerを使用してunitテストとscenarioテストを書きました。</li>
-              <li>GitLab CI/CD パイプライン設定を行いました。</li>
-              <li>
-                バグ修正を通じて、拡張機能の安定性とパフォーマンスの向上に取り組みました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>技術選定において、最適なツールやライブラリの提案を行いました。</span>
               </li>
-              <li>
-                クロム（Chrome）拡張機能上で表示したQRコードを読み込むスマホアプリを作成しました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Puppeteerを使用してunitテストとscenarioテストを書きました。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>GitLab CI/CD パイプライン設定を行いました。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>バグ修正を通じて、拡張機能の安定性とパフォーマンスの向上に取り組みました。</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>クロム（Chrome）拡張機能上で表示したQRコードを読み込むスマホアプリを作成しました。</span>
               </li>
             </ul>
           </div>
@@ -129,20 +153,27 @@ export function Projects() {
               Postgresql
             </p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside">
-              <li>
-                日々、日本側との会議を通じてモンゴル側のチームメンバーにタスクを割り当て、仕事の内容を説明し続けました。
+            <ul className="list-disc list-inside space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>日々、日本側との会議を通じてモンゴル側のチームメンバーにタスクを割り当て、仕事の内容を説明し続けました。</span>
               </li>
-              <li>
-                定期的にクライアントと会議を行い、新たに追加される機能について議論し、要件定義書などの作成に取り組みました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>定期的にクライアントと会議を行い、新たに追加される機能について議論し、要件定義書などの作成に取り組みました。</span>
               </li>
-              <li>
-                チームメンバーのスケジュール管理やタスクの進行状況確認に努め、プロジェクトの進捗をサポートしました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>チームメンバーのスケジュール管理やタスクの進行状況確認に努め、プロジェクトの進捗をサポートしました。</span>
               </li>
-              <li>
-                技術選定において、最適なツールやフレームワークの提案を行い、プロジェクトの成功に貢献しました。
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>技術選定において、最適なツールやフレームワークの提案を行い、プロジェクトの成功に貢献しました。</span>
               </li>
-              <li>playwrightを使用して自動化テストするコードを作成しました。</li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>playwrightを使用して自動化テストするコードを作成しました。</span>
+              </li>
             </ul>
           </div>
           <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -153,10 +184,19 @@ export function Projects() {
               Postgresql
             </p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside">
-              <li>ポータルサイトおよび管理画面の開発とバックエンドの開発</li>
-              <li>5名のチームのマネジメントサポート（スケジュール管理、タスク割り当て、コードレビュー）</li>
-              <li>技術選定に関する提案</li>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>ポータルサイトおよび管理画面の開発とバックエンドの開発</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>5名のチームのマネジメントサポート（スケジュール管理、タスク割り当て、コードレビュー）</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>技術選定に関する提案</span>
+              </li>
             </ul>
           </div>
           <div className="grid grid-cols-2 gap-4">
