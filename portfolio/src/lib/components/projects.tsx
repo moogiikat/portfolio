@@ -15,12 +15,21 @@ export function Projects() {
             </p>
             <p>【言語】 Ruby 【フレームワーク】 Ruby on Rails</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
+            <ul className="list-disc list-inside">
+              <li>仕事の流れは基本設計書の作成、設計書通りの画面作成、単体テストと結合テストの順で進めました。</li>
+              <li>画面設計書に基づいて画面を作成し、バグ修正も担当しました。</li>
+              <li>初めての大規模プロジェクトに参加し、多くの知識と経験を得ることができました。</li>
+            </ul>
           </div>
           <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             <p className="text-base md:text-lg font-bold">BEER ON TAP</p>
             <p>日本全体でビールを購入できるウェブアプリの開発</p>
             <p>【言語】 Java 【フレームワーク】 Spring boot</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
+            <ul className="list-disc list-inside">
+              <li>UI・UX を考え、ユーザーが使いやすい用なデザインを提案し画面を作成しました。</li>
+              <li>ユーザーからのフィードバックを積極的に収集し、機能改善や利便性の向上に取り組みました。</li>
+            </ul>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -81,14 +90,7 @@ export function Projects() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/assets/project_1.jpg"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/project_2.jpg"
+              src="/assets/project_3.png"
               alt="startup template"
               width={500}
               height={500}
@@ -108,7 +110,8 @@ export function Projects() {
             </p>
             <p>Webアプリケーションの開発</p>
             <p>
-              【言語】 Typescript 【フレームワーク】 Next JS 【DB】 Postgresql
+              【言語】 Typescript 【フレームワーク】 Next JS Nest JS【DB】
+              Postgresql
             </p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
             <p>
@@ -126,28 +129,81 @@ export function Projects() {
             <p>・playwrightを使用して自動化テストするコードを作成しました。</p>
           </div>
           <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">自社システム</p>
+            <p className="text-base md:text-lg font-bold">自社開発</p>
+            <p>人材紹介システム</p>
             <p>
-              自社の社員や様々な情報を管理するウェブアプリの開発プロジェクト
+              【言語】Typescript 【フレームワーク】 Next JS、Nest JS 【DB】
+              Postgresql
             </p>
-            <p>Typescript 【フレームワーク】 Next JS、Vue JS</p>
             <p className="font-bold text-sm md:text-base">実績・取り組み</p>
+            <p>・ポータルサイトおよび管理画面の開発とバックエンドの開発</p>
+            <p>
+              ・5名のチームのマネジメントサポート（スケジュール管理、タスク割り当て、コードレビュー）
+            </p>
+            <p>・技術選定に関する提案</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/assets/project_1.jpg"
+              src="/assets/project_4.png"
               alt="startup template"
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/project_2.jpg"
+              src="/assets/project_5.png"
               alt="startup template"
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2024",
+      content: (
+        <div>
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            <p className="text-base md:text-lg font-bold">自社開発（開発中）</p>
+            <p>部屋探しウエブアプリ</p>
+            <p>
+              【言語】 Typescript 【フレームワーク】 Next JS Nest JS 【DB】
+              Postgresql
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "OTHER",
+      content: (
+        <div>
+          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            <p className="text-base md:text-lg font-bold">Workmaster LLC LP</p>
+            <p>
+              <a
+                href="https://workmaster.mn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                https://workmaster.mn/
+              </a>
+            </p>
+            <p className="text-base md:text-lg font-bold mt-4">AHCC Mongolia LP</p>
+            <p>
+              <a
+                href="https://www.ahcc.mn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                https://www.ahcc.mn/
+              </a>
+            </p>
+            <p className="text-base md:text-lg font-bold mt-4">その他も色々あります。</p>
           </div>
         </div>
       ),
@@ -176,7 +232,7 @@ export function Projects() {
 //         </h1>
 //       </div>
 //       <div className={cn("grid gap-y-5", "lg:gap-x-5 lg:grid-cols-3")}>
-//         {projects.map((item, idx) => {
+//         .map((item, idx) => {
 //           return (
 //             <div className="card w-full bg-gray-800 shadow-xl" key={idx}>
 //               <figure>
