@@ -1,317 +1,305 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
-import { Timeline } from "./ui/timeline";
+import Link from "next/link";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { cn } from "lib/utils";
+
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  }),
+};
+
+interface ProjectData {
+  year: string;
+  projects: {
+    title: string;
+    description: string;
+    tech: string[];
+    achievements: string[];
+    images?: string[];
+    link?: string;
+  }[];
+}
+
+const projectsData: ProjectData[] = [
+  {
+    year: "2020",
+    projects: [
+      {
+        title: "CLINIC BOARD",
+        description: "医療クリニックや診療所の経営指標を即座に定量化・可視化するための経営分析ソリューションの開発",
+        tech: ["Ruby", "Ruby on Rails"],
+        achievements: [
+          "仕事の流れは基本設計書の作成、設計書通りの画面作成、単体テストと結合テストの順で進めました",
+          "画面設計書に基づいて画面を作成し、バグ修正も担当しました",
+          "初めての大規模プロジェクトに参加し、多くの知識と経験を得ることができました",
+        ],
+        images: ["/assets/project_1.jpg", "/assets/project_2.jpg"],
+      },
+      {
+        title: "BEER ON TAP",
+        description: "日本全体でビールを購入できるウェブアプリの開発",
+        tech: ["Java", "Spring Boot"],
+        achievements: [
+          "UI・UX を考え、ユーザーが使いやすい用なデザインを提案し画面を作成しました",
+          "ユーザーからのフィードバックを積極的に収集し、機能改善や利便性の向上に取り組みました",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2021",
+    projects: [
+      {
+        title: "ブロックチェーン基盤Webアプリ",
+        description: "ブロックチェーンを基盤としたWebアプリの開発",
+        tech: ["TypeScript", "React.js", "Nest.js"],
+        achievements: [
+          "画面設計書通りに画面を作成し、バグ修正も行いました",
+          "Puppeteerを使用してunitテストとscenarioテストを書きました",
+          "ブロックチェーンに関する知識を積極的に学び、その知識をプロジェクトに活かす取り組みを行いました",
+        ],
+        images: ["/assets/project_3.png"],
+      },
+      {
+        title: "Chrome拡張機能 & QRコードアプリ",
+        description: "クロム（Chrome）拡張機能の開発とQRコードを読み込むアプリの開発",
+        tech: ["TypeScript", "React.js", "React Native"],
+        achievements: [
+          "クロム拡張機能の開発を行いました",
+          "GitLab CI/CD パイプライン設定を行いました",
+          "クロム（Chrome）拡張機能上で表示したQRコードを読み込むスマホアプリを作成しました",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2022",
+    projects: [
+      {
+        title: "JICA(国際協力機構)向け業務システム",
+        description: "Webアプリケーションの開発",
+        tech: ["TypeScript", "Next.js", "Nest.js", "PostgreSQL"],
+        achievements: [
+          "日々、日本側との会議を通じてモンゴル側のチームメンバーにタスクを割り当て、仕事の内容を説明し続けました",
+          "定期的にクライアントと会議を行い、新たに追加される機能について議論し、要件定義書などの作成に取り組みました",
+          "Playwrightを使用して自動化テストするコードを作成しました",
+        ],
+        images: ["/assets/project_4.png", "/assets/project_5.png"],
+      },
+      {
+        title: "人材紹介システム",
+        description: "ポータルサイトおよび管理画面の開発とバックエンドの開発",
+        tech: ["TypeScript", "Next.js", "Nest.js", "PostgreSQL"],
+        achievements: [
+          "5名のチームのマネジメントサポート（スケジュール管理、タスク割り当て、コードレビュー）",
+          "技術選定に関する提案",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2024",
+    projects: [
+      {
+        title: "部屋探しウエブアプリ",
+        description: "自社開発（開発中）",
+        tech: ["TypeScript", "Next.js", "Nest.js", "PostgreSQL"],
+        achievements: [],
+      },
+    ],
+  },
+];
+
+const otherProjects = [
+  {
+    title: "Workmaster LLC LP",
+    url: "https://workmaster.mn/",
+  },
+  {
+    title: "AHCC Mongolia LP",
+    url: "https://www.ahcc.mn/",
+  },
+];
+
+const ProjectCard: React.FC<{ project: ProjectData["projects"][0]; index: number }> = ({
+  project,
+  index,
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      viewport={{ once: true }}
+      className="card-modern group"
+    >
+      <div className="space-y-4">
+        {/* Header */}
+        <div className="flex items-start justify-between">
+          <h4 className="font-heading font-semibold text-lg text-white group-hover:text-primary transition-colors">
+            {project.title}
+          </h4>
+          {project.link && (
+            <Link
+              href={project.link}
+              target="_blank"
+              className="text-zinc-500 hover:text-primary transition-colors"
+            >
+              <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+            </Link>
+          )}
+        </div>
+
+        {/* Description */}
+        <p className="text-zinc-400 text-sm">{project.description}</p>
+
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-2">
+          {project.tech.map((tech) => (
+            <span
+              key={tech}
+              className="px-2 py-1 text-xs rounded-md bg-primary/10 text-primary border border-primary/20"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Achievements */}
+        {project.achievements.length > 0 && (
+          <div className="space-y-2 pt-2">
+            <p className="text-xs text-zinc-500 uppercase tracking-wider">実績・取り組み</p>
+            <ul className="space-y-2">
+              {project.achievements.map((achievement, idx) => (
+                <li key={idx} className="flex items-start gap-2 text-sm text-zinc-300">
+                  <span className="text-primary mt-1">•</span>
+                  <span>{achievement}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Images */}
+        {project.images && project.images.length > 0 && (
+          <div className="grid grid-cols-2 gap-3 pt-4">
+            {project.images.map((image, idx) => (
+              <div key={idx} className="relative overflow-hidden rounded-lg aspect-video">
+                <Image
+                  src={image}
+                  alt={`${project.title} screenshot`}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </motion.div>
+  );
+};
 
 export function Projects() {
-  const data = [
-    {
-      title: "2020",
-      content: (
-        <div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">CLINIC BOARD</p>
-            <p>
-              医療クリニックや診療所の経営指標を即座に定量化・可視化するための経営分析ソリューションの開発
-            </p>
-            <p>【言語】 Ruby 【フレームワーク】 Ruby on Rails</p>
-            <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>仕事の流れは基本設計書の作成、設計書通りの画面作成、単体テストと結合テストの順で進めました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>画面設計書に基づいて画面を作成し、バグ修正も担当しました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>初めての大規模プロジェクトに参加し、多くの知識と経験を得ることができました。</span>
-              </li>
-            </ul>
-          </div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">BEER ON TAP</p>
-            <p>日本全体でビールを購入できるウェブアプリの開発</p>
-            <p>【言語】 Java 【フレームワーク】 Spring boot</p>
-            <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>UI・UX を考え、ユーザーが使いやすい用なデザインを提案し画面を作成しました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>ユーザーからのフィードバックを積極的に収集し、機能改善や利便性の向上に取り組みました。</span>
-              </li>
-            </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/assets/project_1.jpg"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/project_2.jpg"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2021",
-      content: (
-        <div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <h1 className="text-base md:text-lg font-bold">自社製品</h1>
-            <p>ブロックチェーンを基盤としたWebアプリの開発</p>
-            <p>【言語】 Typescript 【フレームワーク】 React js, Nest js</p>
-            <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>画面設計書通りに画面を作成し、バグ修正も行いました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Puppeteerを使用してunitテストとscenarioテストを書きました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>ブロックチェーンに関する知識を積極的に学び、その知識をプロジェクトに活かす取り組みを行いました。</span>
-              </li>
-            </ul>
-          </div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">自社製品</p>
-            <p>
-              クロム（Chrome）拡張機能の開発とQRコードを読み込むアプリの開発
-            </p>
-            <p>【言語】 Typescript 【フレームワーク】 React js React native</p>
-            <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>クロム拡張機能の開発を行いました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>画面設計書に従って、使いやすくて機能的な拡張機能の画面を作成しました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>技術選定において、最適なツールやライブラリの提案を行いました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>Puppeteerを使用してunitテストとscenarioテストを書きました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>GitLab CI/CD パイプライン設定を行いました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>バグ修正を通じて、拡張機能の安定性とパフォーマンスの向上に取り組みました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>クロム（Chrome）拡張機能上で表示したQRコードを読み込むスマホアプリを作成しました。</span>
-              </li>
-            </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/assets/project_3.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2022",
-      content: (
-        <div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">
-              JICA(国際協力機構)向け業務システム
-            </p>
-            <p>Webアプリケーションの開発</p>
-            <p>
-              【言語】 Typescript 【フレームワーク】 Next JS Nest JS【DB】
-              Postgresql
-            </p>
-            <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>日々、日本側との会議を通じてモンゴル側のチームメンバーにタスクを割り当て、仕事の内容を説明し続けました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>定期的にクライアントと会議を行い、新たに追加される機能について議論し、要件定義書などの作成に取り組みました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>チームメンバーのスケジュール管理やタスクの進行状況確認に努め、プロジェクトの進捗をサポートしました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>技術選定において、最適なツールやフレームワークの提案を行い、プロジェクトの成功に貢献しました。</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>playwrightを使用して自動化テストするコードを作成しました。</span>
-              </li>
-            </ul>
-          </div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">自社開発</p>
-            <p>人材紹介システム</p>
-            <p>
-              【言語】Typescript 【フレームワーク】 Next JS、Nest JS 【DB】
-              Postgresql
-            </p>
-            <p className="font-bold text-sm md:text-base">実績・取り組み</p>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>ポータルサイトおよび管理画面の開発とバックエンドの開発</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>5名のチームのマネジメントサポート（スケジュール管理、タスク割り当て、コードレビュー）</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">•</span>
-                <span>技術選定に関する提案</span>
-              </li>
-            </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="/assets/project_4.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/assets/project_5.png"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2024",
-      content: (
-        <div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">自社開発（開発中）</p>
-            <p>部屋探しウエブアプリ</p>
-            <p>
-              【言語】 Typescript 【フレームワーク】 Next JS Nest JS 【DB】
-              Postgresql
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "OTHER",
-      content: (
-        <div>
-          <div className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <p className="text-base md:text-lg font-bold">Workmaster LLC LP</p>
-            <p>
-              <a
-                href="https://workmaster.mn/"
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      className="space-y-8"
+    >
+      {/* Section Header */}
+      <motion.div custom={0} variants={fadeUpVariants} className="section-header">
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-white">
+          <span className="text-gradient">プロジェクト</span>
+        </h2>
+      </motion.div>
+
+      <motion.p
+        custom={1}
+        variants={fadeUpVariants}
+        className="text-zinc-400 max-w-2xl"
+      >
+        5年間ほど、さまざまなプロジェクトに携わってきました。以下は主要なプロジェクトの一覧です。
+      </motion.p>
+
+      {/* Timeline */}
+      <div className="space-y-16">
+        {projectsData.map((yearData, yearIdx) => (
+          <motion.div
+            key={yearData.year}
+            custom={yearIdx + 2}
+            variants={fadeUpVariants}
+            className="relative"
+          >
+            {/* Year Label */}
+            <div className="sticky top-24 z-10 mb-8">
+              <div className="inline-flex items-center gap-3">
+                <span className="font-heading font-bold text-4xl md:text-5xl text-gradient">
+                  {yearData.year}
+                </span>
+                <div className="h-[2px] w-20 bg-gradient-to-r from-primary to-transparent" />
+              </div>
+            </div>
+
+            {/* Projects Grid */}
+            <div className={cn(
+              "grid gap-6",
+              yearData.projects.length > 1 ? "lg:grid-cols-2" : "lg:grid-cols-1 max-w-2xl"
+            )}>
+              {yearData.projects.map((project, projectIdx) => (
+                <ProjectCard
+                  key={project.title}
+                  project={project}
+                  index={projectIdx}
+                />
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Other Projects */}
+      <motion.div
+        custom={10}
+        variants={fadeUpVariants}
+        className="pt-8"
+      >
+        <div className="card-modern">
+          <h3 className="font-heading font-semibold text-xl text-white mb-6">
+            その他のプロジェクト
+          </h3>
+          <div className="space-y-4">
+            {otherProjects.map((project) => (
+              <Link
+                key={project.title}
+                href={project.url}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
+                className="flex items-center justify-between p-4 rounded-xl bg-dark-200/50 hover:bg-dark-200 transition-colors group"
               >
-                https://workmaster.mn/
-              </a>
-            </p>
-            <p className="text-base md:text-lg font-bold mt-4">
-              AHCC Mongolia LP
-            </p>
-            <p>
-              <a
-                href="https://www.ahcc.mn/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
-              >
-                https://www.ahcc.mn/
-              </a>
-            </p>
-            <p className="text-base md:text-lg font-bold mt-4">
+                <span className="text-zinc-300 group-hover:text-white transition-colors">
+                  {project.title}
+                </span>
+                <ArrowTopRightOnSquareIcon className="w-5 h-5 text-zinc-500 group-hover:text-primary transition-colors" />
+              </Link>
+            ))}
+            <p className="text-sm text-zinc-500 pt-2">
               その他も個人的にクロム拡張機能やウエブやスマホアプリなど開発しています。
             </p>
           </div>
         </div>
-      ),
-    },
-  ];
-  return (
-    <div className="w-full">
-      <Timeline data={data} />
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
-
-// import { Square2StackIcon } from "@heroicons/react/24/outline";
-// import Link from "next/link";
-// //
-// import { projects } from "lib/data";
-// import { cn } from "lib/utils";
-
-// export const Projects: React.FC = () => {
-//   return (
-//     <div className="flex flex-col gap-y-5 text-white">
-//       <div className="flex">
-//         <Square2StackIcon width={30} className="text-primary" />
-//         <h1 className="text-white text-2xl pl-4 p-2 font-bold">
-//           今までの参加プロジェクト
-//         </h1>
-//       </div>
-//       <div className={cn("grid gap-y-5", "lg:gap-x-5 lg:grid-cols-3")}>
-//         .map((item, idx) => {
-//           return (
-//             <div className="card w-full bg-gray-800 shadow-xl" key={idx}>
-//               <figure>
-//                 <img src={item.image} alt={item.label} />
-//               </figure>
-//               <div className="card-body">
-//                 <h2 className="card-title">{item.label}</h2>
-//                 <p>{item.body}</p>
-//                 <div className="card-actions justify-end">
-//                   <Link href={item.url} target="_blank">
-//                     <button className="btn btn-primary">サイトへ</button>
-//                   </Link>
-//                 </div>
-//               </div>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// };

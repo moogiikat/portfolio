@@ -1,27 +1,33 @@
 //
 import "tailwindcss/tailwind.css";
+import "./globals.css";
 import type { Metadata } from "next/types";
-import { Inter } from "@next/font/google";
+import { Syne, DM_Sans } from "next/font/google";
 
 import { cn } from "lib/utils";
 
-const inter = Inter({
+const syne = Syne({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-syne",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-dm-sans",
 });
 
 export const metadata: Metadata = {
-  title: "portfolio",
-  description: "portfolio app",
+  title: "ムンフエルデネ | Frontend Developer",
+  description: "Full-stack developer specializing in Next.js, React, and TypeScript",
 };
 
 const RootLayout: React.FCC = ({ children }) => {
   return (
-    <html>
-      <body>
-        <div className={cn("flex min-h-screen w-full flex-col")}>
-          {children}
-        </div>
+    <html lang="ja" className={cn(syne.variable, dmSans.variable)}>
+      <body className={cn("font-sans antialiased")}>
+        {children}
       </body>
     </html>
   );
